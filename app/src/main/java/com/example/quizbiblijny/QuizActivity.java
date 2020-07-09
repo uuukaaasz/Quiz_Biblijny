@@ -108,14 +108,17 @@ public class QuizActivity extends AppCompatActivity {
                 if (radioButtonA.isChecked() && correctAnswer == 1) {
                     toastCorrectAnwser();
                     ifCorrect = true;
+                    points++;
                 }
                 if (radioButtonB.isChecked() && correctAnswer == 2) {
                     toastCorrectAnwser();
                     ifCorrect = true;
+                    points++;
                 }
                 if (radioButtonC.isChecked() && correctAnswer == 3) {
                     toastCorrectAnwser();
                     ifCorrect = true;
+                    points++;
                 }
 
                 if(!ifCorrect) toastWrongAnwser();
@@ -147,6 +150,8 @@ public class QuizActivity extends AppCompatActivity {
                 buttonNextQuestion.setVisibility(View.GONE);
                 buttonCheckAnwser.setVisibility(View.VISIBLE);
 
+                textViewShowPoints.setText(points + "/15");
+                // TODO: 09.07.2020 total points 
                 qNo++;
                 displayQuestion(qNo);
             }

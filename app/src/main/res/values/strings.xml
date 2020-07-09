@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Quiz Biblijny</string>
+
+    <string name="imgButtonPol"></string>
+    <string name="imgButtonEng"></string>
+    <string name="textViewTitle">Teleturniej biblijny</string>
+    <string name="buttonStartK">Kalambury</string>
+    <string name="buttonStartQ">Quiz</string>
+    <string name="buttonRules">Zasady</string>
+    <string name="buttonSettings">Ustawienia</string>
+    <string name="buttonExit">Wyjście</string>
+
+    <string name="textViewPoints">Zdobyte punkty: </string>
+    <string name="textViewShowPoints">0/15</string>
+    <string name="textViewQuestion">Pytanie</string>
+    <string name="radioButtonA">A</string>
+    <string name="radioButtonB">B</string>
+    <string name="radioButtonC">C</string>
+    <string name="showDescription">Pokaż źródło</string>
+    <string name="buttonCorrectAnswer">Pokaż poprawną odpowiedź</string>
+    <string name="buttonCheckAnwser">Sprawdź odpowiedź</string>
+    <string name="buttonNextQuestion">Następne pytanie</string>
+
+    <string name="buttonBack">Powrót do strony głównej</string>
+</resources>

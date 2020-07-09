@@ -1,0 +1,2 @@
+rootProject.name='Quiz Biblijny'
+include ':app'

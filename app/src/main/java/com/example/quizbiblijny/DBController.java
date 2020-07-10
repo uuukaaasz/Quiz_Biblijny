@@ -32,7 +32,8 @@ public class DBController extends SQLiteOpenHelper {
         db.execSQL(
                 "create table if not exists cytaty (" +
                         "id integer primary key autoincrement," +
-                        "content text);" + "");
+                        "content text," +
+                        "footNote text);" + "");
     }
 
     //--------------------------Quiz requests--------------------------
@@ -118,12 +119,26 @@ public class DBController extends SQLiteOpenHelper {
         SQLiteDatabase db = getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put("content", cytaty.getContent());
+        values.put("footNote", cytaty.getFootNote());
         db.insertOrThrow("cytaty",null, values);
     }
 
     public List<SpinnerObject> getCytatById(int Id) {
         List<SpinnerObject> read = new ArrayList<SpinnerObject>();
         String query =  "SELECT cytaty.id, cytaty.content" +
+                " FROM" + " cytaty" +
+                " WHERE cytaty.id = " + Id;
+        SQLiteDatabase db = getReadableDatabase();
+        Cursor kursor = db.rawQuery(query, null);
+        while (kursor.moveToNext()) {
+            read.add(new SpinnerObject(kursor.getInt(0), kursor.getString(1)));
+        }
+        return read;
+    }
+
+    public List<SpinnerObject> getFootById(int Id) {
+        List<SpinnerObject> read = new ArrayList<SpinnerObject>();
+        String query =  "SELECT cytaty.id, cytaty.footNote" +
                 " FROM" + " cytaty" +
                 " WHERE cytaty.id = " + Id;
         SQLiteDatabase db = getReadableDatabase();

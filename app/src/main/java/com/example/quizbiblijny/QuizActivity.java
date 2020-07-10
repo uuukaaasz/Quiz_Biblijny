@@ -1,6 +1,8 @@
 package com.example.quizbiblijny;
 
+import android.content.Intent;
 import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -8,9 +10,11 @@ import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.List;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class QuizActivity extends AppCompatActivity {
 
@@ -22,6 +26,7 @@ public class QuizActivity extends AppCompatActivity {
     public int correctAnswer = 0;
     public int qNo = 1;
     public int points = 0;
+    public int range = 25;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,15 +44,18 @@ public class QuizActivity extends AppCompatActivity {
         buttonCheckAnwser = findViewById(R.id.buttonCheckAnwser);
         buttonNextQuestion = findViewById(R.id.buttonNextQuestion);
 
-        String filename = "questionNumber";
-        //BufferedReader brTest = new BufferedReader(new FileReader(filename));
+        db = new DBController(getApplicationContext());
 
+        qNo = ((Variables) this.getApplication()).getNumber();
+        range = ((Variables) this.getApplication()).getRange();
         displayQuestion(qNo);
+
+        textViewShowPoints.setText(points + "/" + range);
 
         buttonShowDescription.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // TODO: 09.07.2020 context description from datebase
+                startActivity(new Intent(QuizActivity.this, FootNotes.class));
             }
         });
 
@@ -125,10 +133,12 @@ public class QuizActivity extends AppCompatActivity {
 
                 buttonCheckAnwser.setVisibility(View.GONE);
                 buttonNextQuestion.setVisibility(View.VISIBLE);
+                buttonCorrectAnwser.setEnabled(false);
             }
         });
 
         buttonNextQuestion.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
             @Override
             public void onClick(View v) {
                 radioButtonA.setEnabled(true);
@@ -145,10 +155,14 @@ public class QuizActivity extends AppCompatActivity {
 
                 buttonNextQuestion.setVisibility(View.GONE);
                 buttonCheckAnwser.setVisibility(View.VISIBLE);
+                buttonCorrectAnwser.setEnabled(true);
 
-                textViewShowPoints.setText(points + "/15");
-                // TODO: 09.07.2020 total points 
-                qNo++;
+                textViewShowPoints.setText(points + "/" + range);
+
+                qNo = ThreadLocalRandom.current().nextInt(1, 26);
+                setNumber(qNo);
+
+
                 displayQuestion(qNo);
             }
         });
@@ -219,5 +233,9 @@ public class QuizActivity extends AppCompatActivity {
 
     public void toastWrongAnwser() {
         Toast.makeText(this, "NIESTETY! Zła odpowiedź.", Toast.LENGTH_SHORT).show();
+    }
+
+    public void setNumber(int number) {
+        ((Variables) this.getApplication()).setNumber(number);
     }
 }

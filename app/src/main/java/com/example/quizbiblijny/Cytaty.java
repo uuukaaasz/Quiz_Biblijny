@@ -3,12 +3,14 @@ package com.example.quizbiblijny;
 public class Cytaty {
     public Integer id;
     public String Content;
+    public String FootNote;
 
     public Cytaty() {
     }
 
-    public Cytaty(String Content) {
+    public Cytaty(String Content, String FootNote) {
         this.Content = Content;
+        this.FootNote = FootNote;
     }
 
     public Integer getId() {
@@ -25,5 +27,13 @@ public class Cytaty {
 
     public void setContent(String Content) {
         this.Content = Content;
+    }
+
+    public String getFootNote() {
+        return FootNote;
+    }
+
+    public void setFootNote(String FootNote) {
+        this.FootNote = FootNote;
     }
 }

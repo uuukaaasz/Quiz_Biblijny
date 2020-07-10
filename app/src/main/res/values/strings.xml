@@ -24,4 +24,8 @@
     <string name="textViewRulesK">Celem zabawy jest odgadywanie haseł. W każdej kolejce poszczególna drużyna odgaduje hasło lub hasła, przedstawiane przez jednego członka grupy. Z tego powodu często wymaga się, aby drużyna składała się z co najmniej 3 osób. W poszczególnych etapach zabawy hasła przedstawiane są gestami (pantomima) lub rysunkami (elementy rebusu). Zarówno podczas pokazywania, jak i rysowania, nie wolno używać słów, ani wydawać innych dźwięków.</string>
     <string name="textViewRulesQ">Quiz to forma rozrywki intelektualnej polegająca na sprawdzaniu posiadanych wiadomości z różnych dziedzin, np. kino, sport, geografia, muzyka, media itp. Swoją formą przypomina popularne teleturnieje, takie jak “Milionerzy” czy “Jeden z dziesięciu”, których głównym założeniem jest odpowiadanie na pytania przez uczestników gry z tą różnicą, że udział w nim może wziąć każdy, bez wstępnych eliminacji. ZAWSZE poprawna może być tylko jedna z trzech odpowiedzi!</string>
     <string name="buttonBack">Powrót do strony głównej</string>
+
+    <string name="FootNotes_Title">Tytuł</string>
+    <string name="FootNotes_Description">Opis</string>
+    <string name="FootNotes_FootNote">Przypis</string>
 </resources>

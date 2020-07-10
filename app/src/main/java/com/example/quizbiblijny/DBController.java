@@ -30,13 +30,12 @@ public class DBController extends SQLiteOpenHelper {
                         "anwser_three text," +
                         "anwser_correct integer);" + "");
         db.execSQL(
-                "create table if not exists kalambury (" +
+                "create table if not exists cytaty (" +
                         "id integer primary key autoincrement," +
-                        "subject text," +
                         "content text);" + "");
     }
 
-    //--------------------------Quiz request--------------------------
+    //--------------------------Quiz requests--------------------------
     public void InsertQuiz(Quiz quiz) {
         SQLiteDatabase db = getWritableDatabase();
         ContentValues values = new ContentValues();
@@ -47,12 +46,6 @@ public class DBController extends SQLiteOpenHelper {
         values.put("anwser_three", quiz.getAnwser_three());
         values.put("anwser_correct", quiz.getAnwser_correct());
         db.insertOrThrow("quiz",null, values);
-    }
-
-    public void RemoveAll() {
-        SQLiteDatabase db = this.getWritableDatabase();
-        db.execSQL("DROP TABLE IF EXISTS quiz");
-        init(db);
     }
 
     public List<SpinnerObject> getQuestionById(int Id) {
@@ -118,6 +111,34 @@ public class DBController extends SQLiteOpenHelper {
             read.add(new SpinnerObject(kursor.getInt(0), kursor.getString(1)));
         }
         return read;
+    }
+
+    //--------------------------Cytaty requests--------------------------
+    public void InsertCytat(Cytaty cytaty) {
+        SQLiteDatabase db = getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put("content", cytaty.getContent());
+        db.insertOrThrow("cytaty",null, values);
+    }
+
+    public List<SpinnerObject> getCytatById(int Id) {
+        List<SpinnerObject> read = new ArrayList<SpinnerObject>();
+        String query =  "SELECT cytaty.id, cytaty.content" +
+                " FROM" + " cytaty" +
+                " WHERE cytaty.id = " + Id;
+        SQLiteDatabase db = getReadableDatabase();
+        Cursor kursor = db.rawQuery(query, null);
+        while (kursor.moveToNext()) {
+            read.add(new SpinnerObject(kursor.getInt(0), kursor.getString(1)));
+        }
+        return read;
+    }
+
+    public void RemoveAll() {
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.execSQL("DROP TABLE IF EXISTS quiz");
+        db.execSQL("DROP TABLE IF EXISTS cytaty");
+        init(db);
     }
 
     @Override

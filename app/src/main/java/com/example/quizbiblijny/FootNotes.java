@@ -23,7 +23,7 @@ public class FootNotes extends AppCompatActivity {
         title = findViewById(R.id.Title);
         description = findViewById(R.id.Description);
         foot = findViewById(R.id.FootNote);
-        buttonBack = findViewById(R.id.Back);
+        buttonBack = findViewById(R.id.buttonFootBack);
 
         db = new DBController(getApplicationContext());
 

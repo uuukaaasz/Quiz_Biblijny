@@ -1,10 +1,203 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:padding="10dp"
     tools:context=".Settings">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical">
 
-</LinearLayout>
+        <TextView
+            android:id="@+id/Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:text="@string/buttonSettings"
+            android:textAllCaps="true"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textViewLevel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:text="Poziomy trudności:"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/textViewEasy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/checkboxEasy"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/textViewLevel"
+                    android:gravity="center"
+                    android:text="Łatwy"
+                    android:textSize="18sp" />
+
+                <CheckBox
+                    android:id="@+id/checkboxEasy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textViewLevel"
+                    android:layout_alignEnd="@+id/checkboxHard"
+                    android:layout_alignRight="@+id/checkboxHard"
+                    android:checked="true" />
+
+                <TextView
+                    android:id="@+id/textViewMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/checkboxMedium"
+                    android:layout_below="@+id/textViewEasy"
+                    android:gravity="center"
+                    android:text="Średni"
+                    android:textSize="18sp" />
+
+                <CheckBox
+                    android:id="@+id/checkboxMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/checkboxEasy"
+                    android:layout_alignEnd="@+id/checkboxHard"
+                    android:layout_alignRight="@+id/checkboxHard"
+                    android:checked="true" />
+
+                <TextView
+                    android:id="@+id/textViewHard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/checkboxHard"
+                    android:layout_below="@+id/textViewMedium"
+                    android:gravity="center"
+                    android:text="Trudne"
+                    android:textSize="18sp" />
+
+                <CheckBox
+                    android:id="@+id/checkboxHard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/checkboxMedium"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toEndOf="@id/textViewHard"
+                    android:layout_toRightOf="@id/textViewHard"
+                    android:checked="true" />
+
+                <TextView
+                    android:id="@+id/QuestionCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="0dp"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:text="Ilość pytań:"
+                    android:textSize="20sp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_below="@id/QuestionCount">
+
+                    <ImageButton
+                        android:id="@+id/imageButtonLess"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@color/colorAccent"
+                        android:scaleType="centerCrop"
+                        tools:src="@android:drawable/ic_media_previous" />
+
+                    <EditText
+                        android:id="@+id/editTextQuestionCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:text="25"
+                        android:textSize="20sp" />
+
+                    <ImageButton
+                        android:id="@+id/imageButtonMore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/colorAccent"
+                        android:scaleType="centerCrop"
+                        tools:src="@android:drawable/ic_media_next" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/QuestionOrder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="0dp"
+                    android:text="Kolejność pytań:"
+                    android:textSize="20sp" />
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/QuestionOrder"
+                    android:layout_alignStart="@+id/QuestionOrder"
+                    android:layout_alignLeft="@+id/QuestionOrder">
+
+                    <RadioButton
+                        android:id="@+id/rbSequence"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="Po kolei" />
+
+                    <RadioButton
+                        android:id="@+id/rbRandom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Losowo" />
+
+                </RadioGroup>
+
+
+            </RelativeLayout>
+
+        <Button
+            android:id="@+id/buttonSaveChanges"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="ZAPISZ ZMIANY" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/buttonSettingBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:text="@string/buttonBack" />
+
+</RelativeLayout>

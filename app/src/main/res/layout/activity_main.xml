@@ -91,10 +91,10 @@
                 android:text="@string/buttonRules" />
 
             <Button
-                android:id="@+id/buttonSettings"
+                android:id="@+id/buttonPremium"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/buttonSettings" />
+                android:text="@string/buttonPremium" />
 
             <Button
                 android:id="@+id/buttonExit"

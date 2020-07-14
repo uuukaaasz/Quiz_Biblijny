@@ -2,19 +2,11 @@ package com.example.quizbiblijny;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.Toast;
-
-import java.io.FileOutputStream;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -30,7 +22,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnStartK = findViewById(R.id.buttonStartK);
         btnStartQ = findViewById(R.id.buttonStartQ);
         btnRules = findViewById(R.id.buttonLearn);
-        btnSettings = findViewById(R.id.buttonSettings);
+        btnSettings = findViewById(R.id.buttonPremium);
         btnExit = findViewById(R.id.buttonExit);
 
         ibEng = findViewById(R.id.imgButtonEng);
@@ -59,12 +51,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         });
 
-        int number = 1;
-        int range = 25;
-
-        ((Variables) this.getApplication()).setNumber(number);
-        ((Variables) this.getApplication()).setRange(range);
-
         db = new DBController(getApplicationContext());
         db.RemoveAll();
         FillDatabase();
@@ -74,15 +60,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.buttonStartK:
-                moveTo(KalamburyActivity.class);
+                moveTo(Settings.class);
                 break;
             case R.id.buttonStartQ:
-                moveTo(QuizActivity.class);
+                moveTo(Settings.class);
                 break;
             case R.id.buttonLearn:
                 moveTo(Rules.class);
                 break;
-            case R.id.buttonSettings:
+            case R.id.buttonPremium:
                 moveTo(Settings.class);
                 break;
             case R.id.buttonExit:

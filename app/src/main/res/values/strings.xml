@@ -7,7 +7,7 @@
     <string name="buttonStartK">Kalambury</string>
     <string name="buttonStartQ">Quiz</string>
     <string name="buttonRules">Zasady</string>
-    <string name="buttonSettings">Ustawienia</string>
+    <string name="buttonPremium">Premium</string>
     <string name="buttonExit">Wyjście</string>
 
     <string name="textViewPoints">Zdobyte punkty: </string>

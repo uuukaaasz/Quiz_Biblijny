@@ -62,6 +62,6 @@ public class Variables extends Application {
     }
 
     public void setRandom(Boolean Random) {
-        this.radioButtonRandom= Random;
+        this.radioButtonRandom = Random;
     }
 }

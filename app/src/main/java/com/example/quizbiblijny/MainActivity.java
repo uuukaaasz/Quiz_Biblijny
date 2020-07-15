@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.buttonStartK:
-                moveTo(Settings.class);
+                moveTo(KalamburyActivity.class);
                 break;
             case R.id.buttonStartQ:
                 moveTo(Settings.class);

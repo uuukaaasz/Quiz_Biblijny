@@ -10,6 +10,7 @@
     <string name="buttonPremium">Premium</string>
     <string name="buttonExit">Wyjście</string>
 
+    <string name="buttonSettings">Ustawienia</string>
     <string name="textViewPoints">Zdobyte punkty: </string>
     <string name="textViewShowPoints">0/15</string>
     <string name="textViewQuestion">Pytanie</string>
@@ -28,4 +29,6 @@
     <string name="FootNotes_Title">Tytuł</string>
     <string name="FootNotes_Description">Opis</string>
     <string name="FootNotes_FootNote">Przypis</string>
+
+    <string name="buttonBackKalambury">Powrót do kalamburów</string>
 </resources>

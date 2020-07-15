@@ -1,6 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    tools:context=".KalamburyActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/textViewPoints"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_toLeftOf="@id/textViewShowPoints"
+        android:layout_toStartOf="@id/textViewShowPoints"
+        android:text="@string/textViewPoints" />
+
+    <TextView
+        android:id="@+id/textViewShowPoints"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:text="@string/textViewShowPoints" />
+
+    <Button
+        android:id="@+id/buttonBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/buttonBack" />
+
+    <Button
+        android:id="@+id/buttonSource"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/buttonBack"
+        android:layout_toRightOf="@id/buttonBack"
+        android:text="@string/showDescription" />
+
+    <Button
+        android:id="@+id/buttonQuiz"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/YesNo"
+        android:layout_margin="5dp"
+        android:background="#2196F3"
+        android:text="Zobacz w Quizie" />
+
+    <TextView
+        android:id="@+id/textViewQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:gravity="center_horizontal"
+        android:layout_below="@+id/buttonSource"
+        android:layout_marginTop="60dp"
+        android:text="@string/textViewQuestion"
+        android:textSize="40sp" />
+
+    <LinearLayout
+        android:id="@+id/YesNo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/buttonCorrect"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight=".50"
+            android:background="#4FE155"
+            android:text="Udało się zgadnąć! :)" />
+
+        <Button
+            android:id="@+id/buttonUncorrect"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight=".50"
+            android:background="#DA463C"
+            android:text="Nie udało się zgadnąć! :(" />
+
+    </LinearLayout>
+
+</RelativeLayout>

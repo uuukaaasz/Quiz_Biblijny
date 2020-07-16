@@ -167,6 +167,34 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         db.InsertQuiz(new Quiz("hard", "Wszystkie znaki na niebie i ziemi", "konstelacje gwiazd", "informacje wprowadzające w błąd", "zwiastun, wskazówka, zapowiedź", 3));
         db.InsertQuiz(new Quiz("hard", "Salomonowy wyrok", "wyrok sprawiedliwy, zaskakujący mądrością", "wyrok niesprawiedliwy", "wyrok korzystny dla kogoś, kto przekupił sędziego", 1));
 
+        db.InsertCytat(new Cytaty("Rzekł Bóg: Czy może zjadłeś z drzewa, z którego ci zakazałem jeść? Mężczyzna odpowiedział: Niewiasta, którą postawiłeś przy mnie, dała mi owoc z tego drzewa i zjadłem.", "Rdz 3, 11-12"));
+        db.InsertCytat(new Cytaty("Mówił Bóg wszystkie te słowa: Ja jestem Pan, twój Bóg, który cię wywiódł z ziemi egipskiej, z domu niewoli. Nie będziesz miał cudzych bogów obok Mnie! ...", "Wj 20, 1"));
+        db.InsertCytat(new Cytaty("Ojcze, (...) naszego chleba powszedniego dawaj nam na każdy dzień (...)", "Mt 11, 3"));
+        db.InsertCytat(new Cytaty("Nauczycielu, tę kobietę dopiero pochwycono na cudzołóstwie. (...) rzekł do nich [Jezus]: Kto z was jest bez grzechu, niech pierwszy rzuci na nią kamień.", "J 8, 4.7"));
+        db.InsertCytat(new Cytaty("Owoce z drzew tego ogrodu jeść możemy, tylko o owocach z drzewa, które jest w środku ogrodu, Bóg powiedział: Nie wolno wam jeść z niego (...).", "Rdz 3, 2-3"));
+        db.InsertCytat(new Cytaty("Łatwiej jest wielbłądowi przejść przez ucho igielne, niż bogatemu wejść do królestwa Bożego.", "Łk 18, 25"));
+        db.InsertCytat(new Cytaty("Odezwał się Piotr: Panie, jeśli to Ty jesteś, każ mi przyjść do siebie po wodzie! A On rzekł: Przyjdź! Piotr wyszedł z łodzi, i krocząc po wodzie, przyszedł do Jezusa.", "Mt 14, 28-29"));
+
+        db.InsertCytat(new Cytaty("Izraelici utworzyli sobie posąg cielca ulanego z metalu i oddali mu pokłon, mówiąc: “Izraelu, oto twój bóg, który cię wyprowadził z ziemi egipskiej”.", "Wj 32, 8"));
+        db.InsertCytat(new Cytaty("Panie, ile razy mam przebaczyć (...). Czy aż siedem razy? Jezus odrzekł: Nie mówię ci, że aż siedem razy, lecz aż siedemdziesiąt siedem razy.", "Mt 18, 21-22"));
+        db.InsertCytat(new Cytaty("Pewien Samarytanin (...), przechodził również obok niego (pobitego przez zbójców). Gdy go zobaczył, wzruszył się głęboko: podszedł i opatrzył mu rany (...).", "Łk 10, 33-34"));
+        db.InsertCytat(new Cytaty("(Noe) wypuścił z arki gołębicę i ta wróciła do niego pod wieczór, niosąc w dziobie świeży listek z drzewa oliwnego. Poznał więc Noe, że woda na ziemi opadła.", "Rdz 8, 10-11"));
+        db.InsertCytat(new Cytaty("Kamień odrzucony przez budujących stał się kamieniem węgielnym.", "Ps 118, 22"));
+        db.InsertCytat(new Cytaty("Pan Bóg wydalił człowieka z ogrodu Eden, aby uprawiał tę ziemię, z której został wzięty.", "Rdz 3, 23"));
+        db.InsertCytat(new Cytaty("Nikt nie może dwom panom służyć. Bo albo jednego będzie nienawidził, a drugiego będzie miłował.", "Mt 6, 24"));
+        db.InsertCytat(new Cytaty("Oni wiatr sieją, zbierać będą burzę.", "Oz 8, 7"));
+        db.InsertCytat(new Cytaty("Aaron położy obie ręce na głowę żywego kozła, wyzna nad nim wszystkie winy Izraelitów (...), włoży je na głowę kozła i każe (...) wypędzić go na pustynię.", "Kpł 16, 21-22"));
+        db.InsertCytat(new Cytaty("Sięgnął Dawid do torby pasterskiej i wyjąwszy z niej kamień, wypuścił go z procy, trafiając Filistyna (Goliata) w czoło, (...) Filistyn upadł twarzą na ziemię.", "1Sm 17, 49"));
+        db.InsertCytat(new Cytaty("I rzekł Pan do Mojżesza: Wyciągnij rękę ku niebu, a nastanie ciemność w ziemi egipskiej tak gęsta, że można będzie dotknąć ciemności.", "Wj 10, 21"));
+        db.InsertCytat(new Cytaty("Każdego zaś, kto tych słów moich słucha, a nie wypełnia ich, można porównać z człowiekiem nierozsądnym, który dom swój zbudował na piasku.", "Mt 7, 26"));
+
+        db.InsertCytat(new Cytaty("Marność nad marnościami, powiada Kohelet, marność nad marnościami - wszystko marność.", "Koh 1, 2"));
+        db.InsertCytat(new Cytaty("Objawienie (gr. apokalypsis) Jezusa Chrystusa, które dał Mu Bóg, aby ukazać swym sługom, co musi stać się niebawem.", "Ap 1, 1"));
+        db.InsertCytat(new Cytaty("Teraz oto doszło wołanie Izraelitów do Mnie (...). Idź przeto teraz, oto posyłam cię do faraona, i wyprowadź mój lud, Izraelitów, z Egiptu.", "Wj 3, 9"));
+        db.InsertCytat(new Cytaty("Dlatego to mężczyzna opuszcza ojca swego i matkę swoją i łączy się ze swą żoną tak ściśle, że stają się jednym ciałem.", "Rdz 2, 24"));
+        db.InsertCytat(new Cytaty("Będą znaki na słońcu, księżycu i gwiazdach, a na ziemi trwoga narodów bezradnych wobec szumu morza i jego nawałnicy.", "Łk 21, 11"));
+        db.InsertCytat(new Cytaty("Kiedy o tym wyroku sądowym króla dowiedział się cały Izrael, czcił króla, bo przekonał się, że jest obdarzony mądrością Bożą do sprawowania sądów.", "1Krl 3, 28"));
+
         //3rd part - 6x easy (14-19), 12x medium (51-62), 7x hard (88-94)
         db.InsertQuiz(new Quiz("easy", "Cymbał", "ktoś grający na wielu instrumentach", "człowiek ograniczony, gamoń, głupiec", "ktoś obdarowany szczególną mądrością", 2));
         db.InsertQuiz(new Quiz("easy", "Kto dołki kopie, ten sam w nie wpada", "niefrasobliwy robotnik", "przyjąć na siebie skutki własnych zaniedbań", "ktoś źle, traktujący innych zostanie ofiarą swoich działań", 3));
@@ -194,6 +222,34 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         db.InsertQuiz(new Quiz("hard", "Przenieść się na łono Abrahama", "przeprowadzić się do bardziej luksusowego mieszkania", "awansować", "umrzeć", 3));
         db.InsertQuiz(new Quiz("hard", "Służyć mamonie", "uważać relację z mamą za najważniejszą w życiu", "podporządkować życie zarabianiu pieniędzy", "służyć dobrej sprawie", 2));
 
+        db.InsertCytat(new Cytaty("Gdybym mówił językami ludzi i aniołów, a miłości bym nie miał, stałbym się jak miedź brzęcząca albo cymbał brzmiący.", "1Kor 13, 1nn"));
+        db.InsertCytat(new Cytaty("Kto kopie dół - weń wpada.", "Prz 26, 27"));
+        db.InsertCytat(new Cytaty("Dobry pasterz daje życie swoje za owce. Ja jestem dobrym pasterzem i znam owce moje, a moje Mnie znają.", "Mt 10, 11.14"));
+        db.InsertCytat(new Cytaty("Słyszeliście, że powiedziano: Oko za oko i ząb za ząb! A Ja wam powiadam: Nie stawiajcie oporu złemu.", "Mt 5, 38-39"));
+        db.InsertCytat(new Cytaty("A sługę nieużytecznego wyrzućcie na zewnątrz - w ciemności! Tam będzie płacz i zgrzytanie zębów.", "Mt 25, 30"));
+        db.InsertCytat(new Cytaty("Judasz (...) zbliżył się do Jezusa, aby Go pocałować. Jezus mu rzekł: Judaszu, pocałunkiem wydajesz Syna Człowieczego?", "Łk 22, 48"));
+
+        db.InsertCytat(new Cytaty("Otóż i Ja tobie powiadam: Ty jesteś Piotr [czyli Skała] (opoka), i na tej Skale zbuduję Kościół mój.", "Mt 16, 18"));
+        db.InsertCytat(new Cytaty("Zobaczył Jezus, jak uboga jakaś wdowa wrzuciła tam dwa pieniążki, i rzekł: (...) Ta uboga wdowa wrzuciła więcej niż wszyscy inni.", "Łk 21, 2-3"));
+        db.InsertCytat(new Cytaty("Gdy niektórzy mówili o świątyni (...), [Jezus] powiedział: Przyjdzie czas, kiedy z tego, na co patrzycie, nie zostanie kamień na kamieniu, który by nie był zwalony.", "Łk 21, 5-6"));
+        db.InsertCytat(new Cytaty("[Józef z Arymatei] udał się do Piłata i poprosił o ciało Jezusa. Zdjął je z krzyża, owinął w płótno i złożył w grobie.", "Łk 23, 52"));
+        db.InsertCytat(new Cytaty("Wtedy ukazał mu się Anioł Pański w płomieniu ognia, ze środka krzewu. [Mojżesz] widział, jak krzew płonął ogniem, a nie spłonął od niego.", "Wj 3, 2"));
+        db.InsertCytat(new Cytaty("Przypatrzcie się ptakom w powietrzu: nie sieją ani żną i nie zbierają do spichrzów, a Ojciec wasz niebieski je żywi. Czyż wy nie jesteście ważniejsi niż one?", "Mt 6, 26"));
+        db.InsertCytat(new Cytaty("Pan rzekł: pomieszajmy ich język, (...) i tak (ludzie) nie dokończyli budowy miasta (i wieży). nazwano je Babel, tam bowiem Pan pomieszał mowę (...).", "Rdz 11, 7-9"));
+        db.InsertCytat(new Cytaty("Wtedy [młodszy syn] zastanowił się i rzekł: (...) Zabiorę się i pójdę do mego ojca (...). Wybrał się więc i poszedł do swojego ojca.", "Łk 15, 17-20"));
+        db.InsertCytat(new Cytaty("Herod (...), wpadł w straszny gniew. Posłał [oprawców] do Betlejem i całej okolicy i kazał pozabijać wszystkich chłopców w wieku do lat dwóch.", "Mt 2, 16"));
+        db.InsertCytat(new Cytaty("Żołnierze odprowadzili Jezusa na ukrzyżowanie. Wychodząc spotkali człowieka z Cyreny, imieniem Szymon. Tego przymusili, żeby niósł krzyż Jego.", "Mt 27, 31-32"));
+        db.InsertCytat(new Cytaty("Oto rodowód potomków Adama. Gdy Bóg stworzył człowieka, na podobieństwo Boga stworzył go; stworzył mężczyznę i niewiastę.", "Rdz 5, 1-2"));
+        db.InsertCytat(new Cytaty("Wtedy powiedział do nich Mojżesz: To jest chleb, który daje wam Pan na pokarm. Dom Izraela nadał temu [pokarmowi] nazwę manna.", "Wj 16, 14-15.31"));
+
+        db.InsertCytat(new Cytaty("Chociaż mężczyzna i jego żona byli nadzy, nie odczuwali wobec siebie wstydu.", "Rdz 2, 25"));
+        db.InsertCytat(new Cytaty("Rzekł Kain do Abla, brata swego: Chodźmy na pole. A gdy byli na polu, Kain rzucił się na swego brata Abla i zabił go.", "Rdz 4, 8"));
+        db.InsertCytat(new Cytaty("A On sam dźwigając krzyż wyszedł na miejsce zwane Miejscem Czaszki, które po hebrajsku nazywa się Golgota. Tam Go ukrzyżowano.", "J 19, 17-19"));
+        db.InsertCytat(new Cytaty("Przyszedł posłaniec do Hioba i rzekł: Woły orały, a oślice pasły się tuż obok. Wtem napadli Sabejczycy  porwali je, a sługi mieczem pozabijali.", "Hi 1, 14-15nn"));
+        db.InsertCytat(new Cytaty("[Jezus] dodał: Zaprawdę, powiadam wam: żaden prorok nie jest mile widziany w swojej ojczyźnie.", "Łk 4, 24"));
+        db.InsertCytat(new Cytaty("Umarł żebrak, i aniołowie zanieśli go na łono Abrahama.", "Łk 16, 22"));
+        db.InsertCytat(new Cytaty("Nikt nie może dwom panom służyć. Bo albo jednego będzie nienawidził, a drugiego będzie miłował (...). Nie możecie służyć Bogu i Mamonie.", "Mt 6, 24"));
+
         //4th part - 6x easy (20-25), 13x medium (63-75), 6x hard (95-100)
         db.InsertQuiz(new Quiz("easy", "Włos z głowy nie spadnie", "wysokiej jakości usługi fryzjerskie", "niebezpieczeństwo, zagrożenie życia", "ktoś jest bezpieczny", 3));
         db.InsertQuiz(new Quiz("easy", "Siódma pieczęć", "ostateczna tajemnica", "przesadna biurokracja", "niezawodne zabezpieczenie", 1));
@@ -220,5 +276,33 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         db.InsertQuiz(new Quiz("hard", "Poznać po owocach", "poznać kogoś po długiej rozłące dzięki jakiemuś charakterystycznemu szczegółowi", "poznać czy postępowanie jest dobre czy złe po efektach", "szczególne uzdolnienia w dziedzinie botaniki", 2));
         db.InsertQuiz(new Quiz("hard", "Nie znać dnia ani godziny", "dezorientacja, stan zagubienia", "żyć beztrosko", "nie wiedzieć, kiedy coś się stanie, żyć w niepewności, w niepokoju", 3));
         db.InsertQuiz(new Quiz("hard", "Rzucać perły przed wieprze", "wielkodusznie działać na rzecz ludzi potrzebujących", "dawać komuś coś, co może mu zaszkodzić", "robić coś ważnego dla ludzi, którzy tego nie doceniają", 3));
+
+        db.InsertCytat(new Cytaty("U was nawet włosy na głowie wszystkie są policzone. Dlatego nie bójcie się (...).", "Mt 10, 30-31"));
+        db.InsertCytat(new Cytaty("A gdy [Baranek] otworzył pieczęć siódmą, zapanowała w niebie cisza jakby na pół godziny. I ujrzałem siedmiu aniołów, którzy stoją przed Bogiem.", "Ap 8, 1-2"));
+        db.InsertCytat(new Cytaty("Nie stawiajcie oporu złemu. Lecz jeśli cię kto uderzy w prawy policzek, nadstaw mu i drugi!", "Mt 5, 39"));
+        db.InsertCytat(new Cytaty("A On sam dźwigając krzyż wyszedł na miejsce zwane Miejscem Czaszki.", "J 19, 17"));
+        db.InsertCytat(new Cytaty("Salomon panował od Rzeki do kraju Filistynów i do granicy Egiptu nad wszystkimi królestwami. Składały one daninę i były poddane Salomonowi przez całe jego życie.", "1Krl 5, 1"));
+        db.InsertCytat(new Cytaty("Wtedy najwyższy kapłan rozdarł swoje szaty i rzekł: Zbluźnił. Na cóż nam jeszcze potrzeba świadków?", "Mt 26, 65"));
+
+        db.InsertCytat(new Cytaty("Nikt nie zapala światła i nie stawia go w ukryciu ani pod korcem, lecz na świeczniku, aby jego blask widzieli ci, którzy wchodzą.", "Łk 11, 33"));
+        db.InsertCytat(new Cytaty("Strzeżcie się fałszywych proroków, którzy przychodzą do was w owczej skórze, a wewnątrz są drapieżnymi wilkami.", "Mt 7, 15"));
+        db.InsertCytat(new Cytaty("Tomasz rzekł: Jeżeli na rękach Jego nie zobaczę śladu gwoździ i nie włożę palca mego w miejsce gwoździ, i nie włożę ręki mojej do boku Jego, nie uwierzę.", "J 20, 25"));
+        db.InsertCytat(new Cytaty("Judasz Iskariota, udał się do arcykapłanów i rzekł: Co chcecie mi dać, a ja wam Go wydam. A oni wyznaczyli mu trzydzieści srebrników.", "Mt 26, 14-15"));
+        db.InsertCytat(new Cytaty("A zasadziwszy ogród w Eden na wschodzie, Pan Bóg umieścił tam człowieka, którego ulepił.", "Rdz 2, 8"));
+        db.InsertCytat(new Cytaty("Któż z was, gdy ma sto owiec, a zgubi jedną z nich, nie zostawia dziewięćdziesięciu dziewięciu na pustyni i nie idzie za zgubioną, aż ją znajdzie?", "Łk 15, 4"));
+        db.InsertCytat(new Cytaty("Wtedy to Pan Bóg ulepił człowieka z prochu ziemi i tchnął w jego nozdrza tchnienie życia, wskutek czego stał się człowiek istotą żywą.", "Rdz 2, 7"));
+        db.InsertCytat(new Cytaty("Żywe bowiem jest słowo Boże, skuteczne i ostrzejsze niż wszelki miecz obosieczny, zdolne osądzić pragnienia i myśli serca.", "Hbr 4, 12"));
+        db.InsertCytat(new Cytaty("I rzekł Pan do Mojżesza: (...) idź do faraona, i powiedz mu: To mówi Pan (...): Wypuść lud mój, aby Mi służył, ponieważ tym razem ześlę wszystkie moje plagi (...).", "Wj 9, 13-14"));
+        db.InsertCytat(new Cytaty("Jeśli będziecie mieć wiarę jak ziarnko gorczycy, powiecie tej górze: \"Przesuń się stąd tam!\", a przesunie się.", "Mt 17, 20"));
+        db.InsertCytat(new Cytaty("Czemu to widzisz drzazgę w oku swego brata, a belki we własnym oku nie dostrzegasz?", "Mt 7, 3"));
+        db.InsertCytat(new Cytaty("Tego dnia pościli, włożyli na siebie wory, głowy posypali popiołem i porozdzierali swoje szaty.", "1Mch 3, 47"));
+        db.InsertCytat(new Cytaty("Wtedy Pan Bóg rzekł do niewiasty: Dlaczego to uczyniłaś?  Niewiasta odpowiedziała: Wąż mnie zwiódł i zjadłam.", "Rdz 3, 13"));
+
+        db.InsertCytat(new Cytaty("On będzie rozjemcą pomiędzy ludami (...). Wtedy swe miecze przekują na lemiesze, a swoje włócznie na sierpy (...). nie będą się więcej zaprawiać do wojny.", "Iz 2, 4"));
+        db.InsertCytat(new Cytaty("Celnik stał z daleka i nie śmiał nawet oczu wznieść ku niebu, lecz bił się w piersi i mówił: Boże, miej litość dla mnie, grzesznika!", "Łk 18, 13"));
+        db.InsertCytat(new Cytaty("Lud wzniósł okrzyk wojenny i zagrano na trąbach. Skoro tylko lud usłyszał dźwięk trąb, wzniósł gromki okrzyk wojenny i mury [Jerycha] rozpadły się na miejscu.", "Joz 6, 20"));
+        db.InsertCytat(new Cytaty("Poznacie ich po ich owocach. Czy zbiera się winogrona z ciernia, albo z ostu figi? Tak każde dobre drzewo wydaje dobre owoce, a złe drzewo wydaje złe owoce.", "Mt 7, 16-17"));
+        db.InsertCytat(new Cytaty("Czuwajcie więc, bo nie znacie dnia ani godziny.", "Mt 25, 13"));
+        db.InsertCytat(new Cytaty("Nie dawajcie psom tego, co święte, i nie rzucajcie swych  pereł przed świnie, by ich nie podeptały nogami, i obróciwszy się, was nie poszarpały.", "Mt 7,6"));
     }
 }

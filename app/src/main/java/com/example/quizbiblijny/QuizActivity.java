@@ -1,5 +1,6 @@
 package com.example.quizbiblijny;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
@@ -13,6 +14,7 @@ import android.widget.Toast;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -20,14 +22,17 @@ public class QuizActivity extends AppCompatActivity {
 
     TextView textViewPoints, textViewShowPoints, textViewQuestion;
     RadioButton radioButtonA, radioButtonB, radioButtonC;
-    Button buttonShowDescription, buttonCorrectAnwser, buttonCheckAnwser, buttonNextQuestion;
+    Button buttonShowDescription, buttonCorrectAnwser, buttonCheckAnwser, buttonNextQuestion, buttonResult;
     DBController db;
 
     public int correctAnswer = 0;
     public int qNo = 1;
     public int points = 0;
-    public int range = 25;
+    public int range;
+    public int questionId = 0;
+    ArrayList<Integer> Questions = new ArrayList<Integer>();
 
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,12 +48,15 @@ public class QuizActivity extends AppCompatActivity {
         buttonCorrectAnwser = findViewById(R.id.buttonCorrectAnwser);
         buttonCheckAnwser = findViewById(R.id.buttonCheckAnwser);
         buttonNextQuestion = findViewById(R.id.buttonNextQuestion);
+        buttonResult = findViewById(R.id.buttonResult);
 
         db = new DBController(getApplicationContext());
 
-        qNo = ((Variables) this.getApplication()).getNumber();
+        Questions = ((Variables) this.getApplication()).getArray();
+        questionId = Questions.get(qNo-1);
         range = ((Variables) this.getApplication()).getRange();
-        displayQuestion(qNo);
+        displayQuestion(questionId);
+        setNumber(questionId);
 
         textViewShowPoints.setText(points + "/" + range);
 
@@ -85,7 +93,12 @@ public class QuizActivity extends AppCompatActivity {
                 radioButtonC.setEnabled(false);
 
                 buttonCheckAnwser.setVisibility(View.GONE);
-                buttonNextQuestion.setVisibility(View.VISIBLE);
+
+                if(qNo >= range) {
+                    buttonResult.setVisibility(View.VISIBLE);
+                } else {
+                    buttonNextQuestion.setVisibility(View.VISIBLE);
+                }
             }
         });
 
@@ -131,9 +144,17 @@ public class QuizActivity extends AppCompatActivity {
                 radioButtonB.setEnabled(false);
                 radioButtonC.setEnabled(false);
 
+                if(qNo >= range) {
+                    buttonResult.setVisibility(View.VISIBLE);
+                } else {
+                    buttonNextQuestion.setVisibility(View.VISIBLE);
+                }
+
                 buttonCheckAnwser.setVisibility(View.GONE);
-                buttonNextQuestion.setVisibility(View.VISIBLE);
                 buttonCorrectAnwser.setEnabled(false);
+
+                setPoints(points);
+                textViewShowPoints.setText(points + "/" + range);
             }
         });
 
@@ -157,13 +178,17 @@ public class QuizActivity extends AppCompatActivity {
                 buttonCheckAnwser.setVisibility(View.VISIBLE);
                 buttonCorrectAnwser.setEnabled(true);
 
-                textViewShowPoints.setText(points + "/" + range);
+                qNo++;
+                questionId = Questions.get(qNo-1);
+                setNumber(questionId);
+                displayQuestion(questionId);
+            }
+        });
 
-                qNo = ThreadLocalRandom.current().nextInt(1, 26);
-                setNumber(qNo);
-
-
-                displayQuestion(qNo);
+        buttonResult.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(QuizActivity.this, Result.class));
             }
         });
     }
@@ -233,6 +258,10 @@ public class QuizActivity extends AppCompatActivity {
 
     public void toastWrongAnwser() {
         Toast.makeText(this, "NIESTETY! Zła odpowiedź.", Toast.LENGTH_SHORT).show();
+    }
+
+    public void setPoints(int points) {
+        ((Variables) this.getApplication()).setPoints(points);
     }
 
     public void setNumber(int number) {

@@ -2,12 +2,14 @@ package com.example.quizbiblijny;
 
 import android.app.Application;
 
+import java.util.ArrayList;
 import java.util.Random;
 
 public class Variables extends Application {
-    private int number, range;
+    private int number, points, range;
     private boolean checkBoxEasy, checkBoxMedium, checkBoxHard;
     private boolean radioButtonSequence, radioButtonRandom;
+    private ArrayList<Integer> questions = new ArrayList<Integer>();
 
     public Integer getNumber() {
         return number;
@@ -17,6 +19,14 @@ public class Variables extends Application {
         this.number = Number;
     }
 
+    public Integer getPoints() {
+        return this.points;
+    }
+
+    public void setPoints(int Points) {
+        this.points = Points;
+    }
+
     public Integer getRange() {
         return this.range;
     }
@@ -24,6 +34,10 @@ public class Variables extends Application {
     public void setRange(int Range) {
         this.range = Range;
     }
+
+    public ArrayList<Integer> getArray() { return this.questions; }
+
+    public void setArray(ArrayList<Integer> Questions) { this.questions = Questions; }
 
     public Boolean getEasy() {
         return this.checkBoxEasy;

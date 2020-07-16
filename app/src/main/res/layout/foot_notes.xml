@@ -4,6 +4,7 @@
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     android:padding="10dp"
+    android:background="@drawable/source"
     tools:context=".FootNotes">
 
     <LinearLayout
@@ -22,6 +23,7 @@
             android:gravity="center"
             android:text="@string/FootNotes_Title"
             android:textAllCaps="true"
+            android:textColor="#000000"
             android:textSize="24sp"
             android:textStyle="bold" />
 
@@ -30,6 +32,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="@string/FootNotes_Description"
+            android:textColor="#000000"
             android:textSize="18sp" />
 
         <TextView
@@ -38,6 +41,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="end"
             android:text="@string/FootNotes_FootNote"
+            android:textColor="#000000"
             android:textSize="20sp"
             android:textStyle="italic" />
 

@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="10dp"
+    android:padding="10dp"
+    android:background="@drawable/kalambury"
     tools:context=".KalamburyActivity">
 
     <TextView
@@ -12,23 +13,30 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="5dp"
         android:layout_marginRight="5dp"
-        android:layout_toLeftOf="@id/textViewShowPoints"
         android:layout_toStartOf="@id/textViewShowPoints"
-        android:text="@string/textViewPoints" />
+        android:layout_toLeftOf="@id/textViewShowPoints"
+        android:text="@string/textViewPoints"
+        android:textColor="#000000" />
 
     <TextView
         android:id="@+id/textViewShowPoints"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:text="@string/textViewShowPoints" />
+        android:layout_alignParentRight="true"
+        android:text="@string/textViewShowPoints"
+        android:textColor="#000000" />
 
     <Button
         android:id="@+id/buttonBack"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="#FFEB3B"
+        android:textColor="#423B00"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_marginRight="10dp"
         android:text="@string/buttonBack" />
 
     <Button
@@ -37,6 +45,8 @@
         android:layout_height="wrap_content"
         android:layout_toEndOf="@id/buttonBack"
         android:layout_toRightOf="@id/buttonBack"
+        android:background="#B4E877"
+        android:padding="5dp"
         android:text="@string/showDescription" />
 
     <Button
@@ -52,11 +62,12 @@
         android:id="@+id/textViewQuestion"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAlignment="center"
-        android:gravity="center_horizontal"
         android:layout_below="@+id/buttonSource"
         android:layout_marginTop="60dp"
+        android:gravity="center_horizontal"
         android:text="@string/textViewQuestion"
+        android:textAlignment="center"
+        android:textColor="#000000"
         android:textSize="40sp" />
 
     <LinearLayout

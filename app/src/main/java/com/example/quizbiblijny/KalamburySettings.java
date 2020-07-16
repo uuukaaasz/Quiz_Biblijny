@@ -13,24 +13,26 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.List;
 
-public class Settings extends AppCompatActivity {
+public class KalamburySettings extends AppCompatActivity {
 
     EditText QuestionCount;
+    CheckBox checkBoxEasy, checkBoxMedium, checkBoxHard;
     RadioButton radioButtonSequence, radioButtonRandom;
     Button buttonPlay, buttonBack;
 
-    public boolean Sequence, Random;
+    public boolean Easy, Medium, Hard, Sequence, Random;
     public int Range;
     ArrayList<Integer> Questions = new ArrayList<Integer>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.settings);
+        setContentView(R.layout.kalambury_settings);
 
-        QuestionCount = findViewById(R.id.editTextQuestionCount);
+        checkBoxEasy = findViewById(R.id.checkboxEasy);
+        checkBoxMedium = findViewById(R.id.checkboxMedium);
+        checkBoxHard = findViewById(R.id.checkboxHard);
         radioButtonSequence = findViewById(R.id.rbSequence);
         radioButtonRandom = findViewById(R.id.rbRandom);
         buttonPlay = findViewById(R.id.buttonPlay);
@@ -39,6 +41,24 @@ public class Settings extends AppCompatActivity {
         buttonPlay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if(checkBoxEasy.isChecked()) {
+                    Easy = true;
+                }
+                if(!checkBoxEasy.isChecked()) {
+                    Easy = false;
+                }
+                if(checkBoxMedium.isChecked()) {
+                    Medium = true;
+                }
+                if(!checkBoxMedium.isChecked()) {
+                    Medium = false;
+                }
+                if(checkBoxHard.isChecked()) {
+                    Hard = true;
+                }
+                if(!checkBoxHard.isChecked()) {
+                    Hard = false;
+                }
                 if(radioButtonSequence.isChecked()) {
                     Sequence = true;
                     Random = false;
@@ -47,7 +67,7 @@ public class Settings extends AppCompatActivity {
                     Sequence = false;
                     Random = true;
                 }
-                Range = Integer.parseInt(QuestionCount.getText().toString());
+                Range = 0;
                 Play();
             }
         });
@@ -59,21 +79,8 @@ public class Settings extends AppCompatActivity {
             }
         });
     }
-
     public void Play() {
-        if(Random) {
-            for(int i = 1; i <= Range; i++) {
-                Questions.add(i);
-            }
-            Collections.shuffle(Questions);
-        }
-        if(Sequence){
-            for(int i = 1; i <= Range; i++) {
-                Questions.add(i);
-            }
-        }
         ((Variables) this.getApplication()).setRange(Range);
-        ((Variables) this.getApplication()).setArray(Questions);
-        startActivity(new Intent(Settings.this, QuizActivity.class));
+        startActivity(new Intent(KalamburySettings.this, KalamburyActivity.class));
     }
 }

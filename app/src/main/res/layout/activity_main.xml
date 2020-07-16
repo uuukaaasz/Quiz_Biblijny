@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/back"
     tools:context=".MainActivity">
 
     <RelativeLayout
@@ -16,8 +17,8 @@
             style="@style/Widget.AppCompat.ImageButton"
             android:layout_width="50dp"
             android:layout_height="30dp"
-            android:layout_toStartOf="@id/imgButtonEng"
-            android:layout_toLeftOf="@id/imgButtonEng"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
             android:background="@android:drawable/picture_frame"
             android:scaleType="centerCrop"
             android:src="@drawable/pol" />
@@ -56,7 +57,11 @@
                 android:id="@+id/textViewTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
                 android:text="@string/textViewTitle"
+                android:textAllCaps="true"
+                android:textColor="#DEF3FF"
                 android:textSize="24sp"
                 android:textStyle="bold" />
 
@@ -69,38 +74,56 @@
                 <Button
                     android:id="@+id/buttonStartK"
                     style="@style/Widget.AppCompat.Button.Small"
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
                     android:layout_weight=".50"
-                    android:text="@string/buttonStartK" />
+                    android:background="#8BC34A"
+                    android:text="@string/buttonStartK"
+                    android:textColor="#203C00" />
 
                 <Button
                     android:id="@+id/buttonStartQ"
                     style="@style/Widget.AppCompat.Button.Small"
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
                     android:layout_weight=".50"
-                    android:text="@string/buttonStartQ" />
+                    android:background="#03A9F4"
+                    android:text="@string/buttonStartQ"
+                    android:textColor="#002333" />
 
             </LinearLayout>
 
             <Button
                 android:id="@+id/buttonLearn"
+                style="@style/Widget.AppCompat.Button.Small"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/buttonRules" />
+                android:layout_margin="5dp"
+                android:background="#FFEB3B"
+                android:text="@string/buttonRules"
+                android:textColor="#423B00" />
 
             <Button
                 android:id="@+id/buttonPremium"
+                style="@style/Widget.AppCompat.Button.Small"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/buttonPremium" />
+                android:layout_margin="5dp"
+                android:background="#FF45FC"
+                android:text="@string/buttonPremium"
+                android:textColor="#430042" />
 
             <Button
                 android:id="@+id/buttonExit"
+                style="@style/Widget.AppCompat.Button.Small"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/buttonExit" />
+                android:layout_margin="5dp"
+                android:background="#FFEB3B"
+                android:text="@string/buttonExit"
+                android:textColor="#423B00" />
 
         </LinearLayout>
 

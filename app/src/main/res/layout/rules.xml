@@ -1,27 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:gravity="center_horizontal"
-    android:layout_margin="10dp"
+    android:orientation="vertical"
+    android:background="@drawable/back2"
+    android:padding="10dp"
     tools:context=".Rules">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:baselineAligned="false">
+        android:baselineAligned="false"
+        android:orientation="horizontal">
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_marginRight="10dp"
             android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
             android:layout_weight=".50"
+            android:background="#BAFFFFFF"
             android:orientation="vertical">
 
             <TextView
@@ -33,7 +34,7 @@
                 android:text="@string/buttonStartK"
                 android:textAllCaps="true"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:textColor="#4CAF50"
+                android:textColor="#000"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
@@ -44,17 +45,19 @@
                 android:gravity="center_horizontal|center_vertical"
                 android:text="@string/textViewRulesK"
                 android:textAllCaps="false"
-                android:textColor="#4CAF50"
+                android:textColor="#000"
                 android:textStyle="italic"
-                app:autoSizeTextType="none" />
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp" />
 
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:layout_weight=".50">
+            android:layout_weight=".50"
+            android:background="#BAFFFFFF"
+            android:orientation="vertical">
 
             <TextView
                 android:layout_width="match_parent"
@@ -65,7 +68,7 @@
                 android:text="@string/buttonStartQ"
                 android:textAllCaps="true"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:textColor="#3F51B5"
+                android:textColor="#000"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
@@ -75,8 +78,11 @@
                 android:layout_height="match_parent"
                 android:gravity="center_horizontal|center_vertical"
                 android:text="@string/textViewRulesQ"
-                android:textColor="#3F51B5"
-                android:textStyle="italic" />
+                android:textColor="#000"
+                android:textStyle="italic"
+                android:paddingBottom="20dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp" />
 
         </LinearLayout>
 
@@ -86,6 +92,6 @@
         android:id="@+id/buttonBack"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center_horizontal|bottom"
+        android:layout_alignParentBottom="true"
         android:text="@string/buttonBack" />
-</LinearLayout>
+</RelativeLayout>

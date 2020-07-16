@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:background="@drawable/premium"
+    tools:context=".Premium">
+
+    <TextView
+        android:id="@+id/Premium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        android:text="Pakiety Premium"
+        android:textColor="#FFEB3B"
+        android:textSize="30sp" />
+
+    <EditText
+        android:id="@+id/premiumCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Premium"
+        android:layout_alignBottom="@id/buttonRedeem"
+        android:layout_marginTop="50dp"
+        android:layout_toStartOf="@+id/buttonRedeem"
+        android:layout_toLeftOf="@id/buttonRedeem"
+        android:gravity="center"
+        android:hint="Wprowadź kod"
+        android:textColor="#FFEB3B"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/buttonRedeem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Premium"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="50dp"
+        android:background="#49420C"
+        android:text="Zrealizuj"
+        android:textColor="#FFEB3B" />
+
+    <LinearLayout
+        android:id="@+id/PremiumTextLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonRedeem"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.33"
+            android:gravity="center"
+            android:text="Premium 1"
+            android:textColor="#FFEB3B" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.34"
+            android:gravity="center"
+            android:text="Premium 2"
+            android:textColor="#FFEB3B" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.33"
+            android:gravity="center"
+            android:text="Premium 3"
+            android:textColor="#FFEB3B" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/PremiumTextLayout">
+
+        <TextView
+            android:id="@+id/Premium1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.33"
+            android:background="#034706"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/Premium2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.34"
+            android:background="#5A0303"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/Premium3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.33"
+            android:background="#5A0303"
+            android:gravity="center" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/buttonBackToMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#49420C"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:text="@string/buttonBack"
+        android:textColor="#FFEB3B" />
+
+</RelativeLayout>

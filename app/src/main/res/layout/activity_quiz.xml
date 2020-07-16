@@ -3,9 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="10dp"
+    android:padding="10dp"
     android:orientation="vertical"
     android:gravity="center_vertical"
+    android:background="@drawable/quiz"
     tools:context=".QuizActivity">
 
     <LinearLayout
@@ -21,13 +22,15 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="5dp"
             android:layout_marginRight="5dp"
-            android:text="@string/textViewPoints" />
+            android:text="@string/textViewPoints"
+            android:textColor="#000000" />
 
         <TextView
             android:id="@+id/textViewShowPoints"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/textViewShowPoints" />
+            android:text="@string/textViewShowPoints"
+            android:textColor="#000000" />
 
     </LinearLayout>
 
@@ -37,6 +40,7 @@
         android:layout_height="wrap_content"
         android:layout_weight=".10"
         android:text="@string/textViewQuestion"
+        android:textColor="#000000"
         android:textSize="24sp" />
 
     <RadioGroup
@@ -48,19 +52,22 @@
             android:id="@+id/radioButtonA"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/radioButtonA" />
+            android:text="@string/radioButtonA"
+            android:textColor="#000000" />
 
         <RadioButton
             android:id="@+id/radioButtonB"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/radioButtonB" />
+            android:text="@string/radioButtonB"
+            android:textColor="#000000" />
 
         <RadioButton
             android:id="@+id/radioButtonC"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/radioButtonC" />
+            android:text="@string/radioButtonC"
+            android:textColor="#000000" />
 
     </RadioGroup>
 
@@ -77,6 +84,8 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:background="#3F51B5"
             android:text="@string/showDescription" />
 
         <Button
@@ -85,6 +94,8 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:background="#3F51B5"
             android:text="@string/buttonCorrectAnswer" />
 
     </LinearLayout>
@@ -94,6 +105,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight=".10"
+        android:layout_margin="5dp"
+        android:background="#03A9F4"
         android:text="@string/buttonCheckAnwser" />
 
     <Button
@@ -102,6 +115,18 @@
         android:layout_height="wrap_content"
         android:layout_weight=".10"
         android:visibility="gone"
+        android:layout_margin="5dp"
+        android:background="#03A9F4"
         android:text="@string/buttonNextQuestion" />
+
+    <Button
+        android:id="@+id/buttonResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight=".10"
+        android:visibility="gone"
+        android:layout_margin="5dp"
+        android:background="#03A9F4"
+        android:text="@string/buttonResult" />
 
 </LinearLayout>
